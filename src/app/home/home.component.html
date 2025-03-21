@@ -6,6 +6,7 @@
 
 <div *ngIf="selectedProd">
     <div><span>{{selectedProd.id}}</span>{{selectedProd.name}}</div>
+    <div><span>{{selectedProd.location}}</span>{{selectedProd.description}}</div>
     <label for="name"></label>
     <input type="text" [(ngModel)]="selectedProd.name" id="name" placeholder="name">
 </div>
