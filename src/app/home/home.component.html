@@ -1,0 +1,11 @@
+<p>home works!</p>
+<div>
+    <p>{{prod.id}}</p>
+</div>
+
+
+<div *ngIf="selectedProd">
+    <div><span>{{selectedProd.id}}</span>{{selectedProd.name}}</div>
+    <label for="name"></label>
+    <input type="text" [(ngModel)]="selectedProd.name" id="name" placeholder="name">
+</div>
