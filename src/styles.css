@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  @apply bg-ink text-crtGreen min-h-screen;
+  font-family: theme('fontFamily.monoRetro');
+}
+
+.retro-grid {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, rgba(0,255,247,0.14), rgba(10,12,16,0.9) 60%),
+    linear-gradient(rgba(255,43,214,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,247,0.12) 1px, transparent 1px);
+  background-size: 100% 100%, 3rem 3rem, 3rem 3rem;
+  transform: perspective(600px) rotateX(60deg);
+  transform-origin: center top;
+  pointer-events: none;
+}
+
+.btn-neon {
+  @apply relative inline-flex items-center justify-center px-4 py-2 border-2 border-neonCyan rounded-md text-neonCyan shadow-neonCyan shadow-md hover:shadow-neonMagenta transition;
+}

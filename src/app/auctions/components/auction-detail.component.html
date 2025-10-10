@@ -1,0 +1,32 @@
+<section *ngIf="item as it">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="rounded-lg overflow-hidden border border-neonMagenta/40 bg-ink/60 p-3" appTilt3d [tiltScale]="1.01">
+      <img [src]="it.imageUrl" [alt]="it.title" class="w-full h-auto rounded" />
+    </div>
+
+    <div>
+      <h1 class="text-3xl md:text-4xl font-retro text-neonYellow mb-4">{{ it.title }}</h1>
+      <p class="text-neonCyan/80 mb-6">{{ it.description }}</p>
+      <div class="mb-6 flex items-center gap-6">
+        <div>
+          <div class="text-sm text-crtGreen/70">Current bid</div>
+          <div class="text-2xl text-neonCyan">${{ it.currentBid }}</div>
+        </div>
+        <div>
+          <div class="text-sm text-crtGreen/70">Location</div>
+          <div class="text-neonCyan">{{ it.location }}</div>
+        </div>
+      </div>
+
+      <form (ngSubmit)="placeBid()" class="flex flex-wrap items-end gap-3">
+        <label class="text-xs">Name
+          <input class="ml-2 bg-transparent border border-neonCyan/40 rounded px-2 py-1" [(ngModel)]="bidderName" name="bidder" />
+        </label>
+        <label class="text-xs">Bid
+          <input class="ml-2 bg-transparent border border-neonCyan/40 rounded px-2 py-1" [(ngModel)]="bidAmount" name="amount" type="number" />
+        </label>
+        <button type="submit" class="btn-neon" appNeonButton>Place bid</button>
+      </form>
+    </div>
+  </div>
+</section>
