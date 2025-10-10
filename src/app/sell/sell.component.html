@@ -1,0 +1,23 @@
+<section>
+  <h1 class="text-3xl md:text-4xl font-retro text-neonYellow mb-6">{{ title }}</h1>
+  <form (ngSubmit)="submit()" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <label class="text-xs">Title
+      <input class="w-full bg-transparent border border-neonCyan/40 rounded px-3 py-2 mt-1" [(ngModel)]="model.title" name="title" required />
+    </label>
+    <label class="text-xs">Location
+      <input class="w-full bg-transparent border border-neonCyan/40 rounded px-3 py-2 mt-1" [(ngModel)]="model.location" name="location" />
+    </label>
+    <label class="text-xs md:col-span-2">Image URL
+      <input class="w-full bg-transparent border border-neonCyan/40 rounded px-3 py-2 mt-1" [(ngModel)]="model.imageUrl" name="imageUrl" />
+    </label>
+    <label class="text-xs md:col-span-2">Description
+      <textarea class="w-full bg-transparent border border-neonCyan/40 rounded px-3 py-2 mt-1" [(ngModel)]="model.description" name="description"></textarea>
+    </label>
+    <label class="text-xs">Starting Bid
+      <input class="w-full bg-transparent border border-neonCyan/40 rounded px-3 py-2 mt-1" [(ngModel)]="model.startingBid" name="startingBid" type="number" />
+    </label>
+    <div class="md:col-span-2">
+      <button class="btn-neon" appNeonButton>Submit</button>
+    </div>
+  </form>
+</section>
