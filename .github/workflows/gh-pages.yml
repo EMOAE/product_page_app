@@ -1,5 +1,5 @@
 name: Deploy to GitHub Pages
-# trigger: deploy
+# trigger: deploy (re-run after enabling Pages)
 
 on:
   push:
